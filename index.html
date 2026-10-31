@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shubhh77 | Online Services &amp; Digital Help</title>
+<style>
+:root{--navy:#0F2A43;--navy2:#12365A;--deep:#0A1F33;--gold:#E8B84A;--text:#F3F6FA;--muted:#B7C4D3}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.7;font-size:16px}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:700;line-height:1.25}
+a{color:var(--gold)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+/* Loader */
+#loader{position:fixed;inset:0;background:var(--navy);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;transition:opacity .6s ease,visibility .6s ease}
+#loader.done{opacity:0;visibility:hidden}
+.ring{position:relative;width:150px;height:150px}
+.ring svg{width:150px;height:150px;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:4;stroke-linecap:round}
+.ring .track{stroke:rgba(232,184,74,.18)}
+.ring .arc{stroke:var(--gold);stroke-dasharray:440;stroke-dashoffset:440;animation:draw 1.8s ease-in-out infinite}
+.ring span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:700 72px Georgia,serif;color:var(--gold);animation:pulse 1.8s ease-in-out infinite}
+.load-name{font:700 22px Georgia,serif;letter-spacing:3px;color:var(--text)}
+.dots{display:flex;gap:8px}
+.dots i{width:8px;height:8px;border-radius:50%;background:var(--gold);animation:blink 1.2s infinite}
+.dots i:nth-child(2){animation-delay:.2s}.dots i:nth-child(3){animation-delay:.4s}
+@keyframes draw{0%{stroke-dashoffset:440}60%{stroke-dashoffset:0}100%{stroke-dashoffset:-440}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@keyframes blink{0%,100%{opacity:.2}50%{opacity:1}}
+
+/* Layout */
+header{background:var(--deep);border-bottom:3px solid var(--gold);position:sticky;top:0;z-index:50}
+.bar{max-width:880px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo{width:42px;height:42px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;font:700 26px Georgia,serif}
+.brand b{font:700 21px Georgia,serif;color:var(--text);letter-spacing:1px}
+.nav a{color:var(--gold);text-decoration:none;font-size:15px;margin-left:16px}
+main{max-width:880px;margin:auto;padding:0 20px}
+section{padding:48px 0}
+.hero{padding:56px 0 40px}
+.hero h1{font-size:clamp(32px,8vw,52px);margin-bottom:16px}
+.hero p{color:var(--muted);max-width:520px;margin-bottom:26px;font-size:18px}
+.btn{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;padding:14px 28px;border-radius:30px;text-decoration:none;border:0;cursor:pointer;font-size:16px;transition:transform .15s}
+.btn:active{transform:scale(.97)}
+h2{font-size:28px;margin-bottom:8px}
+.sub{color:var(--muted);margin-bottom:24px}
+.services{list-style:none;border-top:1px solid rgba(232,184,74,.4)}
+.services li{padding:16px 0;border-bottom:1px solid rgba(232,184,74,.4);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.services strong{font-family:Georgia,serif;font-size:19px}
+.services span{color:var(--muted)}
+
+/* Posts */
+details{background:var(--navy2);border:1px solid rgba(232,184,74,.5);border-radius:12px;margin-bottom:14px}
+summary{cursor:pointer;padding:18px 20px;font:700 18px Georgia,serif;color:var(--gold);list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:24px;line-height:1}
+details[open] summary::after{content:"\2212"}
+details p{padding:0 20px 20px;color:var(--text)}
+
+.contact{background:var(--navy2);border:1px solid var(--gold);border-radius:16px;padding:32px 24px;text-align:center}
+.contact p{color:var(--muted);margin:8px 0 22px}
+footer{background:var(--deep);text-align:center;padding:24px 20px;color:var(--muted);font-size:14px;margin-top:48px}
+
+.fab{position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;font:700 13px system-ui;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.4);z-index:60}
+
+@media (prefers-reduced-motion:reduce){.ring .arc,.ring span,.dots i{animation:none}.ring .arc{stroke-dashoffset:0}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div id="loader" role="status" aria-label="Loading">
+  <div class="ring">
+    <svg viewBox="0 0 150 150"><circle class="track" cx="75" cy="75" r="70"/><circle class="arc" cx="75" cy="75" r="70"/></svg>
+    <span>S</span>
+  </div>
+  <div class="load-name">SHUBHH77</div>
+  <div class="dots"><i></i><i></i><i></i></div>
+</div>
+
+<header>
+  <div class="bar">
+    <a class="brand" href="#top"><span class="logo">S</span><b>Shubhh77</b></a>
+    <nav class="nav"><a href="#services">Services</a><a href="#blog">Blog</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <h1>Your online work, our responsibility.</h1>
+    <p>Form filling, typing, design and tech help in one place. Done on time and done right.</p>
+    <a class="btn wa" href="#">Chat on WhatsApp</a>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <p class="sub">Send your task on WhatsApp and we take care of the rest.</p>
+    <ul class="services">
+      <li><strong>Online form filling</strong><span>Exams, jobs, scholarships</span></li>
+      <li><strong>Typing work</strong><span>Hindi and English documents</span></li>
+      <li><strong>Resume and documents</strong><span>Clean, one-page resumes</span></li>
+      <li><strong>Poster and design</strong><span>Posts, banners, logos</span></li>
+      <li><strong>Tech help</strong><span>Phone, apps and basic coding</span></li>
+    </ul>
+  </section>
+
+  <section id="blog">
+    <h2>Latest posts</h2>
+    <p class="sub">Tap a post to read it.</p>
+
+    <details open>
+      <summary>Welcome to Shubhh77</summary>
+      <p>Welcome to Shubhh77, your one-stop place for online work. From form filling and typing to design and tech help, we handle it all with speed and accuracy. Send us your task on WhatsApp and we will take care of the rest.</p>
+    </details>
+    <details>
+      <summary>5 online services you can get done from home</summary>
+      <p>Standing in queues wastes time. Today you can get online form filling, document typing, resume making, poster design, and basic tech support done from your phone. Shubhh77 offers all of these in one place, so you save time and avoid mistakes.</p>
+    </details>
+    <details>
+      <summary>How to make a professional resume</summary>
+      <p>Keep your resume to one page and put your latest work first. Use a clean font, add only relevant skills, and always include your phone number and email. A neat resume gets noticed faster. Need one made? Message Shubhh77.</p>
+    </details>
+    <details>
+      <summary>Common mistakes while filling online forms</summary>
+      <p>Most forms get rejected because of small errors like wrong spelling, a mismatched date of birth, or a blurry document upload. Always double-check details against your ID proof and keep scanned files clear. Shubhh77 checks every detail before submitting.</p>
+    </details>
+    <details>
+      <summary>Why choose Shubhh77?</summary>
+      <p>Fast delivery, fair prices, and careful work are our promise. Every task is checked twice before it reaches you. Whether it is a small form or a custom design, you get honest help. Contact us on WhatsApp to get started.</p>
+    </details>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <h2>Need help with something?</h2>
+      <p>Message us your task and get a quick reply.</p>
+      <a class="btn wa" href="#">Chat on WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<footer>&copy; <span id="yr"></span> Shubhh77. All rights reserved.</footer>
+<a class="fab wa" href="#" aria-label="Chat on WhatsApp">Chat</a>
+
+<script>
+var WA_NUMBER = "91XXXXXXXXXX";
+var WA_TEXT = "Hi Shubhh77, I need help with an online task.";
+document.querySelectorAll(".wa").forEach(function(a){
+  a.href = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(WA_TEXT);
+  a.target = "_blank"; a.rel = "noopener";
+});
+document.getElementById("yr").textContent = new Date().getFullYear();
+var start = Date.now();
+function hideLoader(){
+  var wait = Math.max(0, 2200 - (Date.now() - start));
+  setTimeout(function(){ document.getElementById("loader").classList.add("done"); }, wait);
+}
+if (document.readyState === "complete") hideLoader();
+else window.addEventListener("load", hideLoader);
+</script>
+</body>
+</html>

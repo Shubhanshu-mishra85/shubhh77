@@ -8,8 +8,7 @@ The website is designed with a professional Navy Blue and Gold theme to provide 
 
 🚀 Live Website
 
-🔗 Website: https://shubhh77.blogspot.com/?m=1
-
+🔗 Website:(https://shubhanshu-mishra85.github.io/shubhh77/)
 ✨ Features
 
 - 🎨 Professional Navy Blue & Gold UI Design

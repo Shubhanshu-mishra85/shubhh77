@@ -4,521 +4,149 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Shubhh77 | Digital Services & Creative Solutions</title>
-
 <meta name="description" content="Shubhh77 provides professional website development, photography, graphic designing, online services and technical support.">
 
 <style>
 :root {
-  --navy: #0F2A43;
-  --navy2: #12365A;
-  --deep: #081B2D;
-  --gold: #E8B84A;
-  --white: #F3F6FA;
-  --muted: #B7C4D3;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: var(--navy);
-  color: var(--white);
-  font-family: Arial, sans-serif;
-  line-height: 1.7;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  max-width: 100%;
-}
-
-/* LOADER */
-
-#loader {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background: var(--deep);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 18px;
-  transition: .5s;
-}
-
-#loader.done {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.loader-logo {
-  width: 100px;
-  height: 100px;
-  border: 4px solid var(--gold);
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  color: var(--gold);
-  font-size: 55px;
-  font-family: Georgia, serif;
-  animation: pulse 1.5s infinite;
-}
-
-#loader h2 {
-  letter-spacing: 4px;
-  color: var(--gold);
-}
-
-.loader-dots {
-  color: var(--gold);
-  letter-spacing: 8px;
-  animation: pulse 1s infinite;
-}
-
-@keyframes pulse {
-  50% { opacity: .4; transform: scale(1.06); }
-}
-
-/* HEADER */
-
-header {
-  background: var(--deep);
-  border-bottom: 2px solid var(--gold);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.navbar {
-  max-width: 1100px;
-  margin: auto;
-  padding: 14px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo {
-  width: 43px;
-  height: 43px;
-  background: var(--gold);
-  color: var(--navy);
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 26px;
-  font-weight: bold;
-  font-family: Georgia, serif;
-}
-
-.brand-name {
-  font-size: 23px;
-  font-family: Georgia, serif;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-nav {
-  display: flex;
-  gap: 17px;
-  flex-wrap: wrap;
-}
-
-nav a {
-  color: var(--gold);
-  font-size: 14px;
-  transition: .3s;
-}
-
-nav a:hover {
-  color: white;
-}
-
-/* MAIN */
-
-main {
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 22px;
-}
-
-section {
-  padding: 65px 0;
-}
-
-h1, h2, h3 {
-  font-family: Georgia, serif;
-  line-height: 1.3;
-}
-
-h2 {
-  font-size: 30px;
-  margin-bottom: 12px;
-}
-
-.sub {
-  color: var(--muted);
-  margin-bottom: 25px;
-}
-
-/* HERO */
-
-.hero {
-  min-height: 440px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 70px 0;
-}
-
-.hero-tag {
-  color: var(--gold);
-  letter-spacing: 3px;
-  font-size: 13px;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-}
-
-.hero h1 {
-  font-size: clamp(38px, 7vw, 62px);
-  max-width: 750px;
-  margin-bottom: 20px;
-}
-
-.hero h1 span {
-  color: var(--gold);
-}
-
-.hero p {
-  max-width: 600px;
-  color: var(--muted);
-  font-size: 18px;
-  margin-bottom: 28px;
-}
-
-.btn {
-  display: inline-block;
-  background: var(--gold);
-  color: var(--navy);
-  font-weight: bold;
-  padding: 13px 25px;
-  border-radius: 30px;
-  transition: .3s;
-  border: 2px solid var(--gold);
-  cursor: pointer;
-}
-
-.btn:hover {
-  background: transparent;
-  color: var(--gold);
-}
-
-.btn-outline {
-  background: transparent;
-  color: var(--gold);
-  margin-left: 10px;
-}
-
-.btn-outline:hover {
-  background: var(--gold);
-  color: var(--navy);
-}
-
-/* SERVICE CARDS */
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-top: 28px;
-}
-
-.service-card {
-  background: var(--navy2);
-  padding: 25px 20px;
-  border: 1px solid rgba(232,184,74,.4);
-  border-radius: 14px;
-  transition: .3s;
-}
-
-.service-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--gold);
-}
-
-.service-icon {
-  font-size: 35px;
-  margin-bottom: 12px;
-}
-
-.service-card h3 {
-  color: var(--gold);
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.service-card p {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-/* SERVICE LIST */
-
-.services {
-  list-style: none;
-  border-top: 1px solid rgba(232,184,74,.4);
-}
-
-.services li {
-  padding: 15px 5px;
-  border-bottom: 1px solid rgba(232,184,74,.4);
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.services strong {
-  font-family: Georgia, serif;
-  font-size: 17px;
-}
-
-.services span {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-/* PHOTOGRAPHY GALLERY */
-
-.photo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-top: 25px;
-}
-
-.photo-card {
-  background: var(--navy2);
-  border: 1px solid rgba(232,184,74,.4);
-  border-radius: 13px;
-  overflow: hidden;
-  transition: .3s;
-}
-
-.photo-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--gold);
-}
-
-.photo-card img {
-  width: 100%;
-  height: 210px;
-  object-fit: cover;
-  display: block;
-  cursor: pointer;
-}
-
-.photo-info {
-  padding: 15px;
-}
-
-.photo-info h3 {
-  color: var(--gold);
-  font-size: 19px;
-  margin-bottom: 5px;
-}
-
-.photo-info p {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-/* IMAGE PREVIEW */
-
-#imageModal {
-  position: fixed;
-  inset: 0;
-  z-index: 500;
-  background: rgba(0,0,0,.93);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-#imageModal img {
-  max-width: 95%;
-  max-height: 85vh;
-  object-fit: contain;
-  border: 2px solid var(--gold);
-  border-radius: 10px;
-}
-
-#imageModal button {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  background: var(--gold);
-  color: var(--navy);
-  border: none;
-  border-radius: 50%;
-  width: 42px;
-  height: 42px;
-  font-size: 25px;
-  cursor: pointer;
-}
-
-/* BLOG */
-
-details {
-  background: var(--navy2);
-  border: 1px solid rgba(232,184,74,.4);
-  border-radius: 12px;
-  margin-bottom: 14px;
-}
-
-summary {
-  cursor: pointer;
-  padding: 17px 20px;
-  color: var(--gold);
-  font-family: Georgia, serif;
-  font-weight: bold;
-  font-size: 17px;
-}
-
-details p {
-  padding: 0 20px 20px;
-  color: var(--muted);
-}
+  --navy:#0F2A43;
+  --navy2:#12365A;
+  --deep:#081B2D;
+  --gold:#E8B84A;
+  --white:#F3F6FA;
+  --muted:#B7C4D3;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--white);font-family:Arial,sans-serif;line-height:1.7}
+a{text-decoration:none;color:inherit}
+img{max-width:100%}
+
+#loader{
+position:fixed;inset:0;z-index:9999;background:var(--deep);
+display:flex;align-items:center;justify-content:center;flex-direction:column;
+gap:18px;transition:.5s
+}
+#loader.done{opacity:0;visibility:hidden}
+.loader-logo{
+width:100px;height:100px;border:4px solid var(--gold);border-radius:50%;
+display:grid;place-items:center;color:var(--gold);font-size:55px;
+font-family:Georgia,serif;animation:pulse 1.5s infinite
+}
+#loader h2{letter-spacing:4px;color:var(--gold)}
+.loader-dots{color:var(--gold);letter-spacing:8px;animation:pulse 1s infinite}
+@keyframes pulse{50%{opacity:.4;transform:scale(1.06)}}
+
+header{background:var(--deep);border-bottom:2px solid var(--gold);position:sticky;top:0;z-index:100}
+.navbar{
+max-width:1100px;margin:auto;padding:14px 20px;display:flex;
+align-items:center;justify-content:space-between;flex-wrap:wrap;gap:15px
+}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{
+width:43px;height:43px;background:var(--gold);color:var(--navy);
+border-radius:50%;display:grid;place-items:center;font-size:26px;
+font-weight:bold;font-family:Georgia,serif
+}
+.brand-name{font-size:23px;font-family:Georgia,serif;font-weight:bold;letter-spacing:1px}
+nav{display:flex;gap:17px;flex-wrap:wrap}
+nav a{color:var(--gold);font-size:14px;transition:.3s}
+nav a:hover{color:white}
+
+main{max-width:1100px;margin:auto;padding:0 22px}
+section{padding:65px 0}
+h1,h2,h3{font-family:Georgia,serif;line-height:1.3}
+h2{font-size:30px;margin-bottom:12px}
+.sub{color:var(--muted);margin-bottom:25px}
+
+.hero{min-height:440px;display:flex;justify-content:center;flex-direction:column;padding:70px 0}
+.hero-tag{color:var(--gold);letter-spacing:3px;font-size:13px;margin-bottom:15px;text-transform:uppercase}
+.hero h1{font-size:clamp(38px,7vw,62px);max-width:750px;margin-bottom:20px}
+.hero h1 span{color:var(--gold)}
+.hero p{max-width:600px;color:var(--muted);font-size:18px;margin-bottom:28px}
+.btn{
+display:inline-block;background:var(--gold);color:var(--navy);font-weight:bold;
+padding:13px 25px;border-radius:30px;transition:.3s;border:2px solid var(--gold);cursor:pointer
+}
+.btn:hover{background:transparent;color:var(--gold)}
+.btn-outline{background:transparent;color:var(--gold);margin-left:10px}
+.btn-outline:hover{background:var(--gold);color:var(--navy)}
+
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.service-card{
+background:var(--navy2);padding:25px 20px;border:1px solid rgba(232,184,74,.4);
+border-radius:14px;transition:.3s
+}
+.service-card:hover{transform:translateY(-6px);border-color:var(--gold)}
+.service-icon{font-size:35px;margin-bottom:12px}
+.service-card h3{color:var(--gold);font-size:20px;margin-bottom:10px}
+.service-card p{color:var(--muted);font-size:14px}
+
+.services{list-style:none;border-top:1px solid rgba(232,184,74,.4)}
+.services li{
+padding:15px 5px;border-bottom:1px solid rgba(232,184,74,.4);
+display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px
+}
+.services strong{font-family:Georgia,serif;font-size:17px}
+.services span{color:var(--muted);font-size:14px}
+
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:25px}
+.photo-card{
+background:var(--navy2);border:1px solid rgba(232,184,74,.4);
+border-radius:13px;overflow:hidden;transition:.3s
+}
+.photo-card:hover{transform:translateY(-5px);border-color:var(--gold)}
+.photo-card img{width:100%;height:210px;object-fit:cover;display:block;cursor:pointer}
+.photo-info{padding:15px}
+.photo-info h3{color:var(--gold);font-size:19px;margin-bottom:5px}
+.photo-info p{color:var(--muted);font-size:14px}
+
+#imageModal{
+position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.93);
+display:none;align-items:center;justify-content:center;padding:20px
+}
+#imageModal img{max-width:95%;max-height:85vh;object-fit:contain;border:2px solid var(--gold);border-radius:10px}
+#imageModal button{
+position:absolute;top:20px;right:25px;background:var(--gold);color:var(--navy);
+border:none;border-radius:50%;width:42px;height:42px;font-size:25px;cursor:pointer
+}
 
-/* CONTACT */
+details{background:var(--navy2);border:1px solid rgba(232,184,74,.4);border-radius:12px;margin-bottom:14px}
+summary{cursor:pointer;padding:17px 20px;color:var(--gold);font-family:Georgia,serif;font-weight:bold;font-size:17px}
+details p{padding:0 20px 20px;color:var(--muted)}
 
-.contact {
-  background: var(--navy2);
-  border: 1px solid var(--gold);
-  border-radius: 18px;
-  padding: 40px 22px;
-  text-align: center;
-}
-
-.contact p {
-  color: var(--muted);
-  margin: 12px 0 25px;
-}
-
-/* FOOTER */
+.contact{background:var(--navy2);border:1px solid var(--gold);border-radius:18px;padding:40px 22px;text-align:center}
+.contact p{color:var(--muted);margin:12px 0 25px}
 
-footer {
-  background: var(--deep);
-  text-align: center;
-  padding: 30px 20px;
-  margin-top: 40px;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-footer strong {
-  color: var(--gold);
-}
+footer{background:var(--deep);text-align:center;padding:30px 20px;margin-top:40px;color:var(--muted);font-size:14px}
+footer strong{color:var(--gold)}
 
-/* FLOATING WHATSAPP */
-
-.fab {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  width: 58px;
-  height: 58px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  font-size: 14px;
-  font-weight: bold;
-  box-shadow: 0 4px 15px rgba(0,0,0,.4);
-  z-index: 200;
+.fab{
+position:fixed;bottom:20px;right:20px;background:#25D366;color:white;
+width:58px;height:58px;display:grid;place-items:center;border-radius:50%;
+font-size:14px;font-weight:bold;box-shadow:0 4px 15px rgba(0,0,0,.4);z-index:200
 }
-
-/* RESPONSIVE */
 
-@media(max-width: 750px) {
-  .service-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .photo-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .navbar {
-    justify-content: center;
-  }
-
-  nav {
-    justify-content: center;
-    gap: 12px;
-  }
+@media(max-width:750px){
+.service-grid{grid-template-columns:repeat(2,1fr)}
+.photo-grid{grid-template-columns:repeat(2,1fr)}
+.navbar{justify-content:center}
+nav{justify-content:center;gap:12px}
 }
-
-@media(max-width: 480px) {
-  .service-grid,
-  .photo-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero {
-    min-height: 380px;
-  }
-
-  .hero h1 {
-    font-size: 38px;
-  }
-
-  .btn-outline {
-    margin: 12px 0 0;
-  }
-
-  h2 {
-    font-size: 26px;
-  }
+@media(max-width:480px){
+.service-grid,.photo-grid{grid-template-columns:1fr}
+.hero{min-height:380px}
+.hero h1{font-size:38px}
+.btn-outline{margin:12px 0 0}
+h2{font-size:26px}
 }
-
-@media(prefers-reduced-motion:reduce) {
-  *, *::before, *::after {
-    scroll-behavior: auto !important;
-    animation: none !important;
-    transition: none !important;
-  }
+@media(prefers-reduced-motion:reduce){
+*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
 }
 </style>
 </head>
 
 <body>
-
-<!-- LOADING SCREEN -->
 
 <div id="loader">
   <div class="loader-logo">S</div>
@@ -526,507 +154,213 @@ footer strong {
   <div class="loader-dots">● ● ●</div>
 </div>
 
-<!-- HEADER -->
-
 <header>
-  <div class="navbar">
-
-    <a class="brand" href="#home">
-      <div class="logo">S</div>
-      <div class="brand-name">Shubhh77</div>
-    </a>
-
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#websites">Websites</a>
-      <a href="#photography">Photography</a>
-      <a href="#blog">Blog</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-  </div>
+<div class="navbar">
+  <a class="brand" href="#home">
+    <div class="logo">S</div>
+    <div class="brand-name">Shubhh77</div>
+  </a>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#websites">Websites</a>
+    <a href="#photography">Photography</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div>
 </header>
 
 <main id="home">
 
-<!-- HERO SECTION -->
-
 <section class="hero">
-
-  <div class="hero-tag">
-    Digital Services & Creative Solutions
-  </div>
-
-  <h1>
-    Your Digital Vision,
-    <span>Our Creation.</span>
-  </h1>
-
+  <div class="hero-tag">Digital Services & Creative Solutions</div>
+  <h1>Your Digital Vision, <span>Our Creation.</span></h1>
   <p>
     We create professional websites, capture beautiful moments,
     design creative graphics and provide reliable online services
     to help your business grow.
   </p>
-
   <div>
     <a href="#services" class="btn">Explore Services</a>
     <a href="#contact" class="btn btn-outline">Contact Us</a>
   </div>
-
 </section>
 
-<!-- ABOUT -->
-
 <section id="about">
-
   <h2>Welcome to Shubhh77</h2>
-
-  <p class="sub">
-    Your one-stop destination for digital services,
-    website development and creative solutions.
-  </p>
-
+  <p class="sub">Your one-stop destination for digital services, website development and creative solutions.</p>
   <p>
     Shubhh77 is a digital services platform helping individuals,
     startups, cafes, restaurants, shops and businesses establish
     their online presence through technology and creativity.
   </p>
-
 </section>
-
-<!-- MAIN SERVICES -->
 
 <section id="services">
-
   <h2>Our Services</h2>
-
-  <p class="sub">
-    Everything you need to grow digitally, all in one place.
-  </p>
-
+  <p class="sub">Everything you need to grow digitally, all in one place.</p>
   <div class="service-grid">
-
-    <div class="service-card">
-      <div class="service-icon">🌐</div>
-      <h3>Website Development</h3>
-      <p>Professional and responsive websites for businesses.</p>
-    </div>
-
-    <div class="service-card">
-      <div class="service-icon">📸</div>
-      <h3>Photography</h3>
-      <p>Creative food, product, event and business photography.</p>
-    </div>
-
-    <div class="service-card">
-      <div class="service-icon">🎨</div>
-      <h3>Graphic Designing</h3>
-      <p>Logos, posters, banners and social media creatives.</p>
-    </div>
-
-    <div class="service-card">
-      <div class="service-icon">📝</div>
-      <h3>Online Services</h3>
-      <p>Online forms, typing, resumes and document assistance.</p>
-    </div>
-
-    <div class="service-card">
-      <div class="service-icon">💻</div>
-      <h3>Technical Support</h3>
-      <p>Basic computer, mobile, application and digital support.</p>
-    </div>
-
-    <div class="service-card">
-      <div class="service-icon">🚀</div>
-      <h3>Digital Solutions</h3>
-      <p>Helping businesses build and improve their digital identity.</p>
-    </div>
-
+    <div class="service-card"><div class="service-icon">🌐</div><h3>Website Development</h3><p>Professional and responsive websites for businesses.</p></div>
+    <div class="service-card"><div class="service-icon">📸</div><h3>Photography</h3><p>Creative food, product, event and business photography.</p></div>
+    <div class="service-card"><div class="service-icon">🎨</div><h3>Graphic Designing</h3><p>Logos, posters, banners and social media creatives.</p></div>
+    <div class="service-card"><div class="service-icon">📝</div><h3>Online Services</h3><p>Online forms, typing, resumes and document assistance.</p></div>
+    <div class="service-card"><div class="service-icon">💻</div><h3>Technical Support</h3><p>Basic computer, mobile, application and digital support.</p></div>
+    <div class="service-card"><div class="service-icon">🚀</div><h3>Digital Solutions</h3><p>Helping businesses build and improve their digital identity.</p></div>
   </div>
-
 </section>
-
-<!-- WEBSITE DEVELOPMENT -->
 
 <section id="websites">
-
   <h2>Website Development</h2>
-
-  <p class="sub">
-    We build modern websites for businesses, startups and individuals.
-  </p>
-
+  <p class="sub">We build modern websites for businesses, startups and individuals.</p>
   <ul class="services">
-
-    <li>
-      <strong>☕ Cafe & Restaurant Websites</strong>
-      <span>Menus, galleries and business details</span>
-    </li>
-
-    <li>
-      <strong>🏨 Hotel & Resort Websites</strong>
-      <span>Professional hotel websites</span>
-    </li>
-
-    <li>
-      <strong>🏪 Shop & Business Websites</strong>
-      <span>Showcase your products and services</span>
-    </li>
-
-    <li>
-      <strong>🏢 Corporate Websites</strong>
-      <span>Company profiles and business pages</span>
-    </li>
-
-    <li>
-      <strong>🏠 Real Estate Websites</strong>
-      <span>Property listings and project showcases</span>
-    </li>
-
-    <li>
-      <strong>🎓 School & College Websites</strong>
-      <span>Educational websites</span>
-    </li>
-
-    <li>
-      <strong>💼 Portfolio Websites</strong>
-      <span>Personal and professional portfolios</span>
-    </li>
-
-    <li>
-      <strong>🛍️ E-commerce Websites</strong>
-      <span>Online product showcases and stores</span>
-    </li>
-
+    <li><strong>☕ Cafe & Restaurant Websites</strong><span>Menus, galleries and business details</span></li>
+    <li><strong>🏨 Hotel & Resort Websites</strong><span>Professional hotel websites</span></li>
+    <li><strong>🏪 Shop & Business Websites</strong><span>Showcase your products and services</span></li>
+    <li><strong>🏢 Corporate Websites</strong><span>Company profiles and business pages</span></li>
+    <li><strong>🏠 Real Estate Websites</strong><span>Property listings and project showcases</span></li>
+    <li><strong>🎓 School & College Websites</strong><span>Educational websites</span></li>
+    <li><strong>💼 Portfolio Websites</strong><span>Personal and professional portfolios</span></li>
+    <li><strong>🛍️ E-commerce Websites</strong><span>Online product showcases and stores</span></li>
   </ul>
-
 </section>
 
-<!-- PHOTOGRAPHY -->
-
 <section id="photography">
-
   <h2>Photography Services</h2>
-
-  <p class="sub">
-    Capturing moments, products and businesses with creativity.
-    Click any image to view it.
-  </p>
-
+  <p class="sub">Capturing moments, products and businesses with creativity. Click any image to view it.</p>
   <div class="photo-grid">
-
     <div class="photo-card">
-      <img
-        src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=700"
-        alt="Cafe Photography"
-        onclick="openImage(this.src)">
-      <div class="photo-info">
-        <h3>Cafe Photography</h3>
-        <p>Beautiful cafe and restaurant photography.</p>
-      </div>
+      <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=700" alt="Cafe Photography" onclick="openImage(this.src)">
+      <div class="photo-info"><h3>Cafe Photography</h3><p>Beautiful cafe and restaurant photography.</p></div>
     </div>
-
     <div class="photo-card">
-      <img
-        src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=700"
-        alt="Food Photography"
-        onclick="openImage(this.src)">
-      <div class="photo-info">
-        <h3>Food Photography</h3>
-        <p>Creative food and menu photography.</p>
-      </div>
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=700" alt="Food Photography" onclick="openImage(this.src)">
+      <div class="photo-info"><h3>Food Photography</h3><p>Creative food and menu photography.</p></div>
     </div>
-
     <div class="photo-card">
-      <img
-        src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700"
-        alt="Product Photography"
-        onclick="openImage(this.src)">
-      <div class="photo-info">
-        <h3>Product Photography</h3>
-        <p>Professional product presentation.</p>
-      </div>
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700" alt="Product Photography" onclick="openImage(this.src)">
+      <div class="photo-info"><h3>Product Photography</h3><p>Professional product presentation.</p></div>
     </div>
-
     <div class="photo-card">
-      <img
-        src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=700"
-        alt="Event Photography"
-        onclick="openImage(this.src)">
-      <div class="photo-info">
-        <h3>Event Photography</h3>
-        <p>Special moments and event coverage.</p>
-      </div>
+      <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=700" alt="Event Photography" onclick="openImage(this.src)">
+      <div class="photo-info"><h3>Event Photography</h3><p>Special moments and event coverage.</p></div>
     </div>
-
     <div class="photo-card">
-      <img
-        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=700"
-        alt="Portrait Photography"
-        onclick="openImage(this.src)">
-      <div class="photo-info">
-        <h3>Portrait Photography</h3>
-        <p>Creative personal portraits.</p>
-      </div>
+      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=700" alt="Portrait Photography" onclick="openImage(this.src)">
+      <div class="photo-info"><h3>Portrait Photography</h3><p>Creative personal portraits.</p></div>
     </div>
-
     <div class="photo-card">
-      <img
-        src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=700"
-        alt="Business Photography"
-        onclick="openImage(this.src)">
-      <div class="photo-info">
-        <h3>Business Photography</h3>
-        <p>Professional commercial and office photography.</p>
-      </div>
+      <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=700" alt="Business Photography" onclick="openImage(this.src)">
+      <div class="photo-info"><h3>Business Photography</h3><p>Professional commercial and office photography.</p></div>
     </div>
-
   </div>
-
   <div style="text-align:center;margin-top:30px;">
     <a href="#" class="btn wa">Book Photography</a>
   </div>
-
 </section>
-
-<!-- GRAPHIC DESIGN -->
 
 <section id="design">
-
   <h2>Graphic Designing</h2>
-
-  <p class="sub">
-    Creative designs that make your brand stand out.
-  </p>
-
+  <p class="sub">Creative designs that make your brand stand out.</p>
   <ul class="services">
-
-    <li><strong>Logo Design</strong>
-      <span>Professional brand identity</span></li>
-
-    <li><strong>Poster & Banner Design</strong>
-      <span>Business promotions</span></li>
-
-    <li><strong>Social Media Designs</strong>
-      <span>Instagram and Facebook posts</span></li>
-
-    <li><strong>Business Cards</strong>
-      <span>Professional visiting cards</span></li>
-
-    <li><strong>Digital Advertisements</strong>
-      <span>Promotional creatives</span></li>
-
+    <li><strong>Logo Design</strong><span>Professional brand identity</span></li>
+    <li><strong>Poster & Banner Design</strong><span>Business promotions</span></li>
+    <li><strong>Social Media Designs</strong><span>Instagram and Facebook posts</span></li>
+    <li><strong>Business Cards</strong><span>Professional visiting cards</span></li>
+    <li><strong>Digital Advertisements</strong><span>Promotional creatives</span></li>
   </ul>
-
 </section>
-
-<!-- ONLINE SERVICES -->
 
 <section id="online">
-
   <h2>Online Services</h2>
-
-  <p class="sub">
-    Fast, reliable and accurate digital assistance.
-  </p>
-
+  <p class="sub">Fast, reliable and accurate digital assistance.</p>
   <ul class="services">
-
-    <li><strong>Online Form Filling</strong>
-      <span>Exams, jobs and scholarships</span></li>
-
-    <li><strong>Typing Work</strong>
-      <span>Hindi and English documents</span></li>
-
-    <li><strong>Resume & CV</strong>
-      <span>Professional resume creation</span></li>
-
-    <li><strong>Document Assistance</strong>
-      <span>Online document support</span></li>
-
-    <li><strong>Technical Help</strong>
-      <span>Computer, mobile and apps</span></li>
-
+    <li><strong>Online Form Filling</strong><span>Exams, jobs and scholarships</span></li>
+    <li><strong>Typing Work</strong><span>Hindi and English documents</span></li>
+    <li><strong>Resume & CV</strong><span>Professional resume creation</span></li>
+    <li><strong>Document Assistance</strong><span>Online document support</span></li>
+    <li><strong>Technical Help</strong><span>Computer, mobile and apps</span></li>
   </ul>
-
 </section>
-
-<!-- BLOG -->
 
 <section id="blog">
-
   <h2>Latest Posts</h2>
-
-  <p class="sub">
-    Explore useful information and updates.
-  </p>
-
-  <details>
-    <summary>Welcome to Shubhh77</summary>
-    <p>
-      Welcome to Shubhh77, your one-stop destination
-      for digital services, website development and creative solutions.
-    </p>
-  </details>
-
-  <details>
-    <summary>Why does your business need a website?</summary>
-    <p>
-      A professional website helps your business reach more people,
-      showcase products and services and build customer trust.
-    </p>
-  </details>
-
-  <details>
-    <summary>Why is product photography important?</summary>
-    <p>
-      Quality photography helps customers understand products,
-      improves presentation and creates a professional brand image.
-    </p>
-  </details>
-
-  <details>
-    <summary>How to build a professional online presence?</summary>
-    <p>
-      A website, quality photographs, consistent branding
-      and useful content can help build a strong digital identity.
-    </p>
-  </details>
-
+  <p class="sub">Explore useful information and updates.</p>
+  <details><summary>Welcome to Shubhh77</summary><p>Welcome to Shubhh77, your one-stop destination for digital services, website development and creative solutions.</p></details>
+  <details><summary>Why does your business need a website?</summary><p>A professional website helps your business reach more people, showcase products and services and build customer trust.</p></details>
+  <details><summary>Why is product photography important?</summary><p>Quality photography helps customers understand products, improves presentation and creates a professional brand image.</p></details>
+  <details><summary>How to build a professional online presence?</summary><p>A website, quality photographs, consistent branding and useful content can help build a strong digital identity.</p></details>
 </section>
 
-<!-- CONTACT -->
-
 <section id="contact">
-
   <div class="contact">
-
     <h2>Let's Build Something Great!</h2>
-
-    <p>
-      Need a website, photography, graphic design
-      or online assistance? Contact Shubhh77 today.
-    </p>
-
+    <p>Need a website, photography, graphic design or online assistance? Contact Shubhh77 today.</p>
     <a href="#" class="btn wa">Chat on WhatsApp</a>
-
   </div>
-
 </section>
 
 </main>
-
-<!-- IMAGE MODAL -->
 
 <div id="imageModal" onclick="closeImage()">
   <button onclick="closeImage()" aria-label="Close">&times;</button>
   <img id="modalImage" src="" alt="Photography preview">
 </div>
 
-<!-- FOOTER -->
-
 <footer>
-
-  <h3 style="color:var(--gold);margin-bottom:10px;">
-    SHUBHH77
-  </h3>
-
+  <h3 style="color:var(--gold);margin-bottom:10px;">SHUBHH77</h3>
   <p>Digital Services & Creative Solutions</p>
-
-  <p style="margin-top:10px;">
-    Website Development | Photography | Graphic Designing
-  </p>
-
-  <p style="margin-top:15px;">
-    &copy; <span id="year"></span>
-    <strong>Shubhh77</strong>. All rights reserved.
-  </p>
-
-  <p style="margin-top:8px;">
-    Made with ❤️ using HTML, CSS & JavaScript.
-  </p>
-
+  <p style="margin-top:10px;">Website Development | Photography | Graphic Designing</p>
+  <p style="margin-top:15px;">&copy; <span id="year"></span> <strong>Shubhh77</strong>. All rights reserved.</p>
+  <p style="margin-top:8px;">Made with ❤️ using HTML, CSS & JavaScript.</p>
 </footer>
 
-<!-- FLOATING WHATSAPP -->
-
-<a href="#" class="fab wa" aria-label="WhatsApp">
-  WA
-</a>
+<a href="#" class="fab wa" aria-label="WhatsApp">WA</a>
 
 <script>
+// YOUR WHATSAPP NUMBER
+var WA_NUMBER = "919335419980";
 
-// WHATSAPP SETTINGS
-// Replace this with your actual WhatsApp number.
+var WA_TEXT = "Hi Shubhh77, I want to know more about your services.";
 
-var WA_NUMBER = "91XXXXXXXXXX";
-
-var WA_TEXT =
-"Hi Shubhh77, I want to know more about your services.";
-
-// WhatsApp buttons
+// Set WhatsApp link on all WhatsApp buttons
 document.querySelectorAll(".wa").forEach(function(button) {
-
-  button.href =
-    "https://wa.me/" +
-    WA_NUMBER +
-    "?text=" +
-    encodeURIComponent(WA_TEXT);
-
+  button.href = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(WA_TEXT);
   button.target = "_blank";
   button.rel = "noopener noreferrer";
-
 });
 
 // Automatic year
-document.getElementById("year").textContent =
-  new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 
 // Loader
 window.addEventListener("load", function() {
-
   setTimeout(function() {
     document.getElementById("loader").classList.add("done");
   }, 900);
-
 });
 
 // Photography image preview
 function openImage(source) {
-
   document.getElementById("modalImage").src = source;
-
   document.getElementById("imageModal").style.display = "flex";
-
 }
 
 // Close image preview
 function closeImage() {
-
   document.getElementById("imageModal").style.display = "none";
-
   document.getElementById("modalImage").src = "";
-
 }
 
-// Prevent image click from closing the modal
-document.getElementById("modalImage").addEventListener(
-  "click",
-  function(event) {
-    event.stopPropagation();
-  }
-);
+// Prevent image click from closing modal
+document.getElementById("modalImage").addEventListener("click", function(event) {
+  event.stopPropagation();
+});
 
 // Escape key closes image preview
 document.addEventListener("keydown", function(event) {
-
-  if (event.key === "Escape") {
-    closeImage();
-  }
-
+  if (event.key === "Escape") closeImage();
 });
-
 </script>
 
 </body>

@@ -8,7 +8,7 @@ We provide online assistance, professional website development, photography, gra
 
 🚀 Live Website
 
-🔗 Website: https://shubhh77.blogspot.com/?m=1
+🔗 Website: https://shubhanshu-mishra85.github.io/shubhh77/
 
 ✨ Our Services
 
